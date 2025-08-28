@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yönetim Paneli</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<div class="admin-wrap">
+  <div class="login-card" id="loginCard">
+    <h1>Yönetici Girişi</h1>
+    <div class="field"><label>Kullanıcı</label><input id="admUser" placeholder="admin"></div>
+    <div class="field"><label>Parola</label><input id="admPass" type="password" placeholder="******"></div>
+    <button class="btn -primary" id="loginBtn">Giriş Yap</button>
+    <p class="muted small">Varsayılan: admin / 123456 — Lütfen değiştirin.</p>
+  </div>
+
+  <div class="panel" id="panel" style="display:none">
+    <div class="panel-top">
+      <h2>Duyuru Yöneticisi</h2>
+      <div class="spacer"></div>
+      <button class="btn" id="logoutBtn">Çıkış</button>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Yeni Duyuru</h3>
+        <div class="field"><label>Başlık</label><input id="nTitle"></div>
+        <div class="field"><label>Özet</label><textarea id="nExcerpt" rows="3"></textarea></div>
+        <div class="field"><label>Bağlantı (opsiyonel)</label><input id="nLink" placeholder="/duyuru/ornek"></div>
+        <button class="btn -primary" id="addNews">Ekle</button>
+      </div>
+      <div class="card">
+        <h3>Mevcut Duyurular</h3>
+        <div id="newsTable"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/assets/js/admin.js"></script>
+</body>
+</html>
